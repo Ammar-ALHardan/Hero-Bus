@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    
+</head>
+
+
+<body>
+    <ul id="driver"></ul>
+    <script src="jquery.js"></script>
+    
+    <script>
+            $( function(){
+$.get("http://localhost/project_man/project_man/api/", function(data){
+for(var i=0; i<data.length; i++){
+    $('#driver').append("<li>"+data[i].full_name+"</li>");
+              }
+           },'json');
+        });
+
+
+    </script>
+</body>
+</html>
